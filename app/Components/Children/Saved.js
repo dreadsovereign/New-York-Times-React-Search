@@ -1,7 +1,5 @@
-// Include React 
 var React = require('react');
 
-// This is the saved component. It will be used to show a log of saved articles.
 var Saved = React.createClass({
 
 	getInitialState() {

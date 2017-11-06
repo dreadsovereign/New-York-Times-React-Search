@@ -1,9 +1,7 @@
 var React = require('react');
 
-// Component creation
 var Form = React.createClass({
 
-	// Here we set a generic state associated with the text being searched for
 	getInitialState() {
 		return {
 			topic: "",
@@ -12,25 +10,20 @@ var Form = React.createClass({
 		}
 	},
 
-	// This function will respond to the user input 
 	handleChange = event => {
 
-    	// Here we create syntax to capture any change in text to the query terms (pre-search).
     	var newState = {};
     	newState[event.target.id] = event.target.value;
     	this.setState(newState);
 
 	},
 
-	// When a user submits... 
 	handleClick() {
 	
-		// Set the parent to have the search term
 		this.props.setTerm(this.state.topic, this.state.startYear, this.state.endYear);
 
 	},
 
-	// Here we render the function
 	render() {
 
 		return(
@@ -65,5 +58,4 @@ var Form = React.createClass({
 	}
 });
 
-// Export the component back for use in other files
 module.exports = Form;

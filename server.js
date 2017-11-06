@@ -8,7 +8,6 @@ var Article = require('./models/Article.js');
 var app = express();
 var PORT = process.env.PORT || 3000;
 
-// Run Morgan for Logging
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));

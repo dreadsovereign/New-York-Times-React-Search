@@ -1,14 +1,11 @@
 var axios = require('axios');
 
-// New York Times API
 var nytAPI = "7b1004c6152e40cba0083391ec8938ef";
 
-// Helper Functions
 var helpers = {
 
 	runQuery: function(topic, startYear, endYear){
 
-		//Figure out the geolocation
 		var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + nytAPI + "&q=" + topic + "&begin_date=" + startYear + "0101&end_date=" + endYear + "0101";
 
 		return axios.get(queryURL)
@@ -36,8 +33,6 @@ var helpers = {
 
 	},
 
-
-	// This function posts saved articles to our database.
 	postArticle: function(title, date, url){
 
 		axios.post('/api/saved', {title: title, date: date, url: url})
@@ -51,5 +46,4 @@ var helpers = {
 }
 
 
-// We export the helpers function (which contains getGithubInfo)
 module.exports = helper;

@@ -1,6 +1,5 @@
 var React = require('react');
 
-// Component creation
 var Results = React.createClass({
 
 	getInitialState: function(){
@@ -12,7 +11,6 @@ var Results = React.createClass({
 		}
 	},
 
-	// When a user clicks save article
 	clickToSave: function(result){
 
 		this.props.saveArticle(result.headline.main, result.pub_date, result.web_url);
@@ -29,7 +27,6 @@ var Results = React.createClass({
 		this.setState({results: myResults});
 	},
 	
-	// Here we render the function
 	render() {
 		return(
 

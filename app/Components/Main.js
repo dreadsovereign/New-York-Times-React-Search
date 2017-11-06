@@ -1,21 +1,16 @@
 var axios = require('axios');
 
-// Include React 
 var React = require('react');
 
-// Here we include all of the sub-components
 var Form = require('./Children/Form');
 var Results = require('./Children/Results');
 var Saved = require('./Children/Saved');
 
-// Helper Function
 var helpers = require('./utils/helper.js');
 
 
-// This is the main component. 
 var Main = React.createClass({
 
-	// Here we set a generic state associated with the number of clicks
 	getInitialState: function(){
 		return {
 			topic: "",
@@ -26,7 +21,6 @@ var Main = React.createClass({
 		}
 	},	
 
-	// We use this function to allow children to update the parent with searchTerms.
 	setTerm: function(tpc, stYr, endYr){
 		this.setState({
 			topic: tpc,
@@ -62,7 +56,6 @@ var Main = React.createClass({
 			}.bind(this));
 	},
 
-	// If the component updates we'll run this code
 	componentDidUpdate: function(prevProps, prevState){
 
 		if(prevState.topic != this.state.topic){
@@ -90,7 +83,6 @@ var Main = React.createClass({
 			}.bind(this));
 	},
 
-	// Here we render the function
 	render() {
 		return(
 
