@@ -6,7 +6,7 @@ Once the search results are returned, the user has a few options. Each search re
 
 If the user saves the article, it is stored in MongoDB. Once an article is saved, the saved articles will appear in the "Saved Articles" section of the page. If the user wishes to remove any articles from the Saved Article section, they can click on the "Delete" button. 
 
-The application utilizes React, MongoDB, and the New York Times API. 
+The application utilizes Node, Express, React, MongoDB, and the New York Times API. 
 
 ## Demo
 
